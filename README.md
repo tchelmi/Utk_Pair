@@ -60,7 +60,7 @@ Formulazione classica Siamese (Bromley et al.): `concat(F1, F2, |F1−F2|)` → 
 
 ---
 
-## 🧬 Tecniche di Deep Learning implementate
+## 🧬 Tecniche implementate
 
 - **Early Fusion (ResNet 6 canali)** — modifica strutturale del primo livello convoluzionale di una ResNet-18 pre-addestrata per accettare tensori a 6 canali, derivati dalla concatenazione delle due immagini RGB. Modello: `ResNetPairwiseAge`.
 
