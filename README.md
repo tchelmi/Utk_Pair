@@ -165,16 +165,6 @@ age-comparison/
 │   ├── best_mlp.pth           # Fase 2a — Siamese MLP
 │   └── best_pairwise.pth      # Fase 2b — Early Fusion
 ├── runs/                      # log TensorBoard
-├── images/
-    ├── age_comparison_pipeline.png       # Diagramma di flusso completo.
-    ├── early_fusion_diagram.png
-    ├── late_fusion_siamese_diagram.png   # Schemi architetturali.
-    ├── fase1_age_regressor.png
-    ├── fase2_pairwise_mlp.png
-    ├── fase3_early_fusion.png            # Grafici di addestramento TensorBoard per ogni fase.
-    ├── loss_mse_curve.png
-    ├── mae_years_curve.png
-    ├── training_results.png              # Metriche dettagliate.
 ├── age_regression_model.py    # AgeResNet18 + AgeFeatureExtractor
 ├── datasets.py                # SingleAgeDataset + PairwiseAgeDataset
 ├── inference_example.py       # script di inferenza da terminale
@@ -184,8 +174,34 @@ age-comparison/
 ├── train_pair_mlp.py          # training Fase 2a
 ├── train_pairwise.py          # training Fase 2b
 ├── utils.py                   # TensorBoard writer, save/load checkpoint
-└── age_comparison_notebook.ipynb  # notebook unificato (tutte le fasi)
+├── age_comparison_notebook.ipynb  # notebook unificato (tutte le fasi)
+└── inference_notebook.ipynb       # notebook standalone per l'inferenza
 ```
+
+---
+
+## 📓 Notebook
+
+### `age_comparison_notebook.ipynb` — notebook principale
+Unifica **tutte le fasi del progetto** in un unico documento eseguibile. Contiene:
+1. Setup & imports
+2. Definizione del dataset (`SingleAgeDataset`, `PairwiseAgeDataset`)
+3. Definizione dei modelli (`ResNetPairwiseAge`, `AgeResNet18`, `PairwiseAgeMLP`)
+4. Utilità (TensorBoard writer, checkpoint)
+5. Training — Fase 1: Age Regressor
+6. Training — Fase 2a: Siamese MLP
+7. Training — Fase 2b: Early Fusion
+8. Inference
+
+> È la versione più aggiornata e corretta del codice — i file `.py` standalone potrebbero avere ancora alcuni bug minori non ancora riportati.
+
+### `inference_notebook.ipynb` — notebook di inferenza
+Notebook standalone per caricare un modello già addestrato e confrontare due immagini a scelta. Restituisce:
+- Probabilità `P(prima più giovane)` / `P(prima più vecchia)`
+- `confidence = max(probabilità)` come misura di certezza della predizione
+- Output `"INCERTO (possibile coetanei)"` se la confidence scende sotto una soglia configurabile
+
+Utile per testare rapidamente il modello su foto proprie senza dover rieseguire il training.
 
 ---
 
