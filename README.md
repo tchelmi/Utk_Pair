@@ -165,6 +165,16 @@ age-comparison/
 │   ├── best_mlp.pth           # Fase 2a — Siamese MLP
 │   └── best_pairwise.pth      # Fase 2b — Early Fusion
 ├── runs/                      # log TensorBoard
+├── images/
+    ├── age_comparison_pipeline.png       # Diagramma di flusso completo.
+    ├── early_fusion_diagram.png
+    ├── late_fusion_siamese_diagram.png   # Schemi architetturali.
+    ├── fase1_age_regressor.png
+    ├── fase2_pairwise_mlp.png
+    ├── fase3_early_fusion.png            # Grafici di addestramento TensorBoard per ogni fase.
+    ├── loss_mse_curve.png
+    ├── mae_years_curve.png
+    ├── training_results.png              # Metriche dettagliate.
 ├── age_regression_model.py    # AgeResNet18 + AgeFeatureExtractor
 ├── datasets.py                # SingleAgeDataset + PairwiseAgeDataset
 ├── inference_example.py       # script di inferenza da terminale
