@@ -3,6 +3,7 @@
 Progetto di esame pratico per la laurea magistrale.  
 L'obiettivo è confrontare due fotografie di volti e determinare quale persona è più giovane,
 usando tecniche di **pairwise learning** sul dataset **UTKFace**.
+  UTKFace dataset is a large-scale face dataset with long age span (range from 0 to 116 years old). The dataset consists of over 20,000 face images with annotations of age, gender, and ethnicity. The images cover large variation in pose, facial expression, illumination, occlusion, resolution, etc. This dataset could be used on a variety of tasks, e.g., face detection, age estimation, age progression/regression, landmark localization, etc.
 
 Sono stati implementati e confrontati **due approcci distinti**:
 
@@ -268,6 +269,7 @@ tensorboard --logdir runs
 
 ## 📖 Riferimenti
 
+- UTKFace; (https://susanqq.github.io/UTKFace/)
 - Bromley et al., *Signature Verification using a Siamese Time Delay Neural Network* (1994)
 - He et al., *Deep Residual Learning for Image Recognition* (2016)
-- Zhang et al., *Age Progression/Regression by Conditional Adversarial Autoencoder* — UTKFace dataset
+- Zhang et al., *Age Progression/Regression by Conditional Adversarial Autoencoder* 
