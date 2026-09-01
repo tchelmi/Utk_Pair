@@ -271,4 +271,3 @@ tensorboard --logdir runs
 - Bromley et al., *Signature Verification using a Siamese Time Delay Neural Network* (1994)
 - He et al., *Deep Residual Learning for Image Recognition* (2016)
 - Zhang et al., *Age Progression/Regression by Conditional Adversarial Autoencoder* — UTKFace dataset
-- Riferimento stilistico: [`bassemr/one-shot-learning`](https://github.com/bassemr/one-short-learning) — One-Shot Learning su CIFAR-100 con Siamese Network
